@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <form method="POST">
+        <div>
+            <h1>Inicio de sesíon</h1>
+            <p>Ingresa tu nombre</p>
+            <label for="name"></label>
+            <input type="text" id="name" name="name" required>
+
+            <p>Ingresa tu contraseña</p>
+            <label for="contrasena"></label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <!-- Botón de envío -->
+            <div><button type="submit">Verificar</button></div>
+        </div>
+
+
+
+       {% if name is not none and contrasena is not none %}
+        <div class="resultado">
+            <p>{{ mensaje }}</p>
+        </div>
+        {% endif %}
+    </form>
+</body>
+</html>
